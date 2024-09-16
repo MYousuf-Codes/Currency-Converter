@@ -32,7 +32,7 @@ document.getElementById('converter-form').addEventListener('submit', function(e)
         document.getElementById('result').textContent = `Your Converted Amount is: £${Math.round(convertedAmount)}`;
     }
     else if (toCurrency === "INR") {
-        document.getElementById('result').textContent = `Your Converted Amount is: ₹${Math.round(convertedAmount)}`;
+        document.getElementById('result').textContent = `Your Converted Amount is: ₹ ${Math.round(convertedAmount)}`;
     }
     else if (toCurrency === "PKR") {
         document.getElementById('result').textContent = `Your Converted Amount is: Rs ${Math.round(convertedAmount)}`;
