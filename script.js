@@ -20,6 +20,25 @@ document.getElementById('converter-form').addEventListener('submit', function(e)
     let convertedAmount = baseAmount * toAmount;
 
     document.getElementById('result').textContent = (`Converted Amount: ${Math.round(convertedAmount)}`);
+
+    // Output the converted amount with the appropriate currency symbol
+    if (toCurrency === "USD") {
+        document.getElementById('result').textContent = `Your Converted Amount is: $${Math.round(convertedAmount)}`;
+    }
+    else if (toCurrency === "EUR") {
+        document.getElementById('result').textContent = `Your Converted Amount is: €${Math.round(convertedAmount)}`;
+    }
+    else if (toCurrency === "GBP") {
+        document.getElementById('result').textContent = `Your Converted Amount is: £${Math.round(convertedAmount)}`;
+    }
+    else if (toCurrency === "INR") {
+        document.getElementById('result').textContent = `Your Converted Amount is: ₹${Math.round(convertedAmount)}`;
+    }
+    else if (toCurrency === "PKR") {
+        document.getElementById('result').textContent = `Your Converted Amount is: Rs ${Math.round(convertedAmount)}`;
+    } else {
+        document.getElementById('result').textContent = `Converted Amount: ${Math.round(convertedAmount)}`;
+    }
 });
 
 
